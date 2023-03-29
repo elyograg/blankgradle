@@ -1,12 +1,9 @@
 package org.elyograg.blankgradle;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
+//@SpringBootTest
 class BlankgradleApplicationTests {
 
-	@Test
+//	@Test
 	void contextLoads() {
 	}
 

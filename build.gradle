@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.10'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+//	id 'org.springframework.boot' version '2.7.10'
+//	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group = 'org.elyograg'
@@ -13,10 +13,22 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	implementation 'org.springframework.boot:spring-boot-starter'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+// https://mvnrepository.com/artifact/org.apache.solr/solr-solrj
+	implementation group: 'org.apache.solr', name: 'solr-solrj', version: '9+'
+	implementation "ch.qos.logback:logback-classic:1+"
+	implementation "org.slf4j:log4j-over-slf4j:2+"
+	implementation "org.slf4j:jcl-over-slf4j:2+"
+	implementation "org.slf4j:jul-to-slf4j:2+"
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+configurations.all {
+	exclude group: "org.apache.httpcomponents"
+	exclude group: "org.slf4j", module: "slf4j-log4j12"
+	exclude group: "log4j", module: "log4j"
 }
+
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
