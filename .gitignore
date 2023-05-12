@@ -1,9 +1,11 @@
+*.jar
 HELP.md
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+java_pid*.hprof
 
 ### STS ###
 .apt_generated

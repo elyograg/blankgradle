@@ -1,34 +1,49 @@
 plugins {
-	id 'java'
-//	id 'org.springframework.boot' version '2.7.10'
-//	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+  id 'java'
 }
 
-group = 'org.elyograg'
+group = 'org.elyograg.changeme'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
+  maven {
+    url "https://artifactory.elyograg.org/artifactory/libs-release"
+  }
+//  mavenCentral()
 }
 
 dependencies {
-//	implementation 'org.springframework.boot:spring-boot-starter'
-//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-// https://mvnrepository.com/artifact/org.apache.solr/solr-solrj
-	implementation group: 'org.apache.solr', name: 'solr-solrj', version: '9+'
-	implementation "ch.qos.logback:logback-classic:1+"
-	implementation "org.slf4j:log4j-over-slf4j:2+"
-	implementation "org.slf4j:jcl-over-slf4j:2+"
-	implementation "org.slf4j:jul-to-slf4j:2+"
+  implementation group: 'org.apache.solr', name: 'solr-solrj', version: '9+'
+  implementation group: 'info.picocli', name: 'picocli', version: '4+'
+  implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1+'
+  implementation group: 'org.slf4j', name: 'jcl-over-slf4j', version: '2+'
+  implementation group: 'org.slf4j', name: 'jul-to-slf4j', version: '2+'
+  implementation group: 'org.slf4j', name: 'log4j-over-slf4j', version: '2+'
+  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2+'
+  testImplementation('junit:junit:4+')
 }
 
 configurations.all {
-//	exclude group: "org.apache.httpcomponents"
-	exclude group: "org.slf4j", module: "slf4j-log4j12"
-	exclude group: "log4j"
+  exclude group: 'commons-logging'
+  exclude group: 'log4j'
+  exclude group: 'org.apache.logging.log4j'
+  //exclude group: 'org.apache.httpcomponents'
 }
 
-//tasks.named('test') {
-//	useJUnitPlatform()
-//}
+tasks.named('test') {
+  useJUnitPlatform()
+}
+
+task dist(type: Jar) {
+  archiveBaseName = project.name + '-all'
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  manifest {
+    attributes 'Implementation-Title': 'ChangeMe',
+      'Implementation-Version': version,
+      'Main-Class': 'org.elyograg.changeme.Main',
+      'Multi-Release': 'true'
+  }
+  from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+  with jar
+}
