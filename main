@@ -8,7 +8,6 @@ JAR_WILDCARD="changeme*.jar"
 LOCAL_HEAP="256m"
 GC_TUNE=("-XX:+UnlockExperimentalVMOptions" "-XX:+UseZGC")
 
-
 # To work around strange behavior in Git Bash.
 MSYS_NO_PATHCONV=1
 export MSYS_NO_PATHCONV
