@@ -12,6 +12,13 @@ this as the starting point for your own project and source control system.
 Importing the project works correctly with eclipse and intellij.  Other IDEs
 were not attempted.
 
+## Demo on a bash environment
+
+- Clone the project.
+- cd to the new directory.
+- `./gradlew clean dist`
+- `./main`
+
 ## Structure
 
 - A complete project structure ready to be populated.  Uses the gradle wrapper, version 8.1.1.
