@@ -5,8 +5,9 @@ package org.elyograg.changeme;
 
 import org.junit.Test;
 
-class MainTests {
+public final class MainTests {
   @Test
-  void someTest() {
+  final void someTest() {
+
   }
 }
