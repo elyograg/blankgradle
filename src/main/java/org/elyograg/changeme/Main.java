@@ -23,15 +23,13 @@ public final class Main implements Runnable {
   /** Help option. */
   @Option(names = { "-h", "--help",
       "--usage" }, arity = "0", usageHelp = true, scope = ScopeType.INHERIT, description = ""
-          + "Display this command usage. "
-          + "The short version of this option is also honored by the shell script.")
+          + "Display this command usage.")
   private static boolean help;
 
   /** Verbose option. */
   @Option(names = { "-v", "--verbose",
       "--debug" }, arity = "0", scope = ScopeType.INHERIT, description = ""
-          + "Log any available debug messages. The short version of this option is treated "
-          + "the same as -h by the shell script.")
+          + "Log any available debug messages.")
   private static boolean verbose;
 
   /**

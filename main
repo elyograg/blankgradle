@@ -5,8 +5,9 @@ REQUIRED_PROGS=(which date dirname basename mktemp)
 MINIMUM_JAVA_MAJOR_VERSION="11"
 JAR_WILDCARD="changeme*.jar"
 # changeme: The heap size may need adjustment.
-LOCAL_HEAP="128m"
-GC_TUNE=""
+LOCAL_HEAP="256m"
+GC_TUNE=("-XX:+UnlockExperimentalVMOptions" "-XX:+UseZGC")
+
 
 # To work around strange behavior in Git Bash.
 MSYS_NO_PATHCONV=1
@@ -216,7 +217,7 @@ log_info "Passing control to java."
 log_info "JAR_FILE=${JAR_FILE}"
 log_info "JAVA_BIN=${JAVA_BIN}"
 log_info "Options given: $*"
-"${JAVA_BIN}" "-Xmx${LOCAL_HEAP}" "${GC_TUNE}" -jar "${JAR_FILE}" "$@"
+"${JAVA_BIN}" "${GC_TUNE[@]}" "-Xmx${LOCAL_HEAP}" -jar "${JAR_FILE}" "$@"
 RET="$?"
 
 cleanup_and_exit "${RET}"
