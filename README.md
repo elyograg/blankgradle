@@ -14,3 +14,9 @@ adjustment for you to correctly create your own project.  You should also
 delete the .git directory after looking over the 'git grep changeme' output
 in anticipation of using this as the starting point of your own project and
 source control system.
+
+If importing into eclipse, Go to Import, Import..., and find "Existing
+Gradle Project".  If importing via the Git perspective or using any other
+import type, the resulting project will most likely not work right.
+
+In IntelliJ Idea, everything works correctly with all import methods attempted.
