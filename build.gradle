@@ -44,7 +44,7 @@ task dist(type: Jar) {
   archiveBaseName = project.name + '-all'
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
   manifest {
-    attributes 'Implementation-Title': 'ChangeMe',
+    attributes 'Implementation-Title': 'changeme',
       'Implementation-Version': version,
       'Main-Class': 'org.elyograg.changeme.Main',
       'Multi-Release': 'true'
