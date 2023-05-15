@@ -1,12 +1,12 @@
-This is a blank gradle project with a pre-created source code structure that
-can be changed.  I created this because when eclipse creates a new gradle
+This is a blank gradle java project with a pre-created source code structure
+that can be changed.  I created this because when eclipse creates a new gradle
 project, the structure is odd.  Everything I would have expected at the root
 is in a lib directory.  There is a test directory structure ready for
 populating.  There are resources directories where things like logging
 configuration or properties fies should go.  The build.gradle file is
-prepopulated with slf4j as the logging framework, logback as the ultimate
-logging destination, and JUnit 4 as the test framework.  It points at maven
-central.
+prepopulated for Java 11, slf4j as the logging framework, logback as the
+ultimate logging destination, and JUnit 4 as the test framework.  It points
+at maven central for dependency downloads.
 
 It is recommended that you run 'git grep changeme' after cloning this
 repository so you can see all the places that will most likely need an
