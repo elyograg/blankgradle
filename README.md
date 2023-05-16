@@ -4,7 +4,7 @@ This is a blank gradle java project with a pre-created source code structure
 that can be changed.  When eclipse creates a new gradle project, the
 structure is odd.  Everything expected at the root is in a lib directory.
 
-You should run `git grep changeme` after cloning this repository so you can
+You should run `git grep -i changeme` after cloning this repository so you can
 see all the places that will most likely need an adjustment for you to
 correctly create your own project.  You should also delete the .git directory
 after looking over the 'git grep changeme' output in anticipation of using
