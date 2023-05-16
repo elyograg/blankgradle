@@ -12,7 +12,7 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.ScopeType;
 
 @Command(name = "changeme", sortOptions = false, scope = ScopeType.INHERIT, description = ""
-    + "changeme: A sample program.", footer = StaticStuff.USAGE_OPTION_SEPARATOR_TEXT, exitCodeOnUsageHelp = 2)
+    + "changeme: A sample program.", footer = StaticStuff.USAGE_OPTION_SEPARATOR_TEXT)
 public final class Main implements Runnable {
   /**
    * A logger object. Gets the fully qualified class name so this can be used
