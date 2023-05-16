@@ -49,4 +49,4 @@ were not attempted.
   - settings.gradle
     - Just defines the project name.
   - `main`
-    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options preserved.
+    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.
