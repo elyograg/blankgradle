@@ -22,7 +22,7 @@ that say `changeme` are very easy to change in a good IDE.
 - Clone the project.
 - cd to the new directory.
 - `./gradlew clean dist`
-- `./main`
+- `./changeme`
 
 ## Structure
 
