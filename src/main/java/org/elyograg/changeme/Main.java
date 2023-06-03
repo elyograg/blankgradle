@@ -20,16 +20,9 @@ public final class Main implements Runnable {
    */
   private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-  /** Help option. */
-  @Option(names = { "-h", "--help",
-      "--usage" }, arity = "0", usageHelp = true, scope = ScopeType.INHERIT, description = ""
-          + "Display this command usage.")
-  private static boolean help;
-
   /** Verbose option. */
-  @Option(names = { "-v", "--verbose",
-      "--debug" }, arity = "0", scope = ScopeType.INHERIT, description = ""
-          + "Log any available debug messages.")
+  @Option(names = { "-v" }, arity = "0", scope = ScopeType.INHERIT, description = ""
+      + "Log any available debug messages.")
   private static boolean verbose;
 
   /**
@@ -52,6 +45,12 @@ public final class Main implements Runnable {
         "--exit" }, arity = "0", hidden = true, scope = ScopeType.INHERIT, description = ""
             + "Exit the program as soon as it starts.")
     private static boolean exitFlag;
+
+    /** Help option. */
+    @Option(names = {
+        "-h" }, arity = "0", usageHelp = true, scope = ScopeType.INHERIT, description = ""
+            + "Display this command usage.")
+    private static boolean help;
   }
 
   /** Optional option. */
