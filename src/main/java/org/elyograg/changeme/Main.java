@@ -71,7 +71,7 @@ public final class Main implements Runnable {
     log.info("Program starting");
 
     if (RequiredOpts.exitFlag) {
-
+      System.exit(0);
     }
   }
 }

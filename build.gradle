@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+  // SolrJ
+  //implementation group: 'org.apache.solr', name: 'solr-solrj', version: '9+'
   // Easy commandline handling.
   implementation group: 'info.picocli', name: 'picocli', version: '4+'
 
