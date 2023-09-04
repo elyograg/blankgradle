@@ -45,7 +45,7 @@ that say `changeme` are very easy to change in a good IDE.
     -  A class to put static methods, constants, etc.
   - `src/main/resources`
     - A place to put resources.
-      - Includes a `logback.xml` config file as a starting point.
+      - Includes a `logback.xml` config file as a starting point for a logging config.
       - One common thing found here is properties files like `application.properties`
   - `src/test/java/org/elyograg/changeme`
     - `MainTests.java`
