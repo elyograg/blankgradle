@@ -29,8 +29,8 @@ that say `changeme` are very easy to change in a good IDE.
 - Clone this to a new directory, or clone and then rename.
 - Change to the new directrory.
 - `rm -rf .git` to remove this git repo.  You'll probably want to keep the .gitignore file.
-- Change the package names and directories that contain 'changeme'.
-- `grep -rl changeme` to find files that need changing.
+- `grep -rl changeme` to find content within the files that needs adjustment.
+- Change the package names and directories that contain 'changeme'.  A good IDE will do both at the same time.
 - If you're going to put your project in a git repo, follow normal git procedures.
 - Build your project!
 
@@ -64,4 +64,4 @@ that say `changeme` are very easy to change in a good IDE.
   - `settings.gradle`
     - Just defines the project name.
   - `changeme`
-    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  You'll want to rename and edit this script if you plan to use it.  Validates that the provided Java is new enough to run the program and alerts if not.
+    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  Validates that the provided Java is new enough to run the program and alerts if not.  You'll want to rename and edit this script if you plan to use it.  This project is designed as a starting point for a commandline program.
