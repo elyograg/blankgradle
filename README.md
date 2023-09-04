@@ -11,8 +11,8 @@ cloning this repository so you can see all the places that will most likely
 need an adjustment for you to correctly create your own project.  You should
 also delete the .git directory after looking over the output of the above
 commands in anticipation of using this as the starting point for your own
-project and source control system.  Importing the project works correctly
-with eclipse and intellij.  Other IDEs were not attempted.
+project and source control system.  Importing the gradle project works
+correctly with eclipse and intellij.  Other IDEs were not attempted.
 
 The project comes with the gradle wrapper, version 8.1.1.  All the things
 that say `changeme` are very easy to change in a good IDE.
@@ -23,6 +23,16 @@ that say `changeme` are very easy to change in a good IDE.
 - cd to the new directory.
 - `./gradlew clean dist`
 - `./changeme`
+
+## To use for your own project:
+
+- Clone this to a new directory, or clone and then rename.
+- Change to the new directrory.
+- `rm -rf .git` to remove this git repo.  You'll probably want to keep the .gitignore file.
+- Change the package names and directories that contain 'changeme'.
+- `grep -rl changeme` to find files that need changing.
+- If you're going to put your project in a git repo, follow normal git procedures.
+- Build your project!
 
 ## Structure
 
@@ -36,7 +46,7 @@ that say `changeme` are very easy to change in a good IDE.
   - src/main/resources
     - A place to put resources.
       - Includes a logback.xml config file as a starting point.
-      - One common thing found here is application.properties.
+      - One common thing found here are properties files like application.properties.
   - src/test/java/org/elyograg/changeme
     - MainTests.java
       - A mostly empty template class.
@@ -49,9 +59,9 @@ that say `changeme` are very easy to change in a good IDE.
     - Uses slf4j as the logging framework.
     - Uses logback as the final logging destination.
     - Uses JUnit4 for a test framework.
-    - Automatically gets new minor and point releases of dependencies.
-    - Has a "dist" target that builds a jar with dependencies.  It specifies the class with a `main` method so it can be started with `java -jar filename.jar`.
+    - Automatically gets new minor and point releases of dependencies.  Adjust build.gradle if you don't want this.
+    - Has a "dist" target that builds a jar with dependencies.  The build.gradle file specifies the class with a `main` method so it can be started with `java -jar filename.jar`.
   - settings.gradle
     - Just defines the project name.
-  - `changeme`
-    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.
+  - changeme
+    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  You'll want to rename and edit this script if you plan to use it.
