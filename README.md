@@ -64,4 +64,4 @@ that say `changeme` are very easy to change in a good IDE.
   - `settings.gradle`
     - Just defines the project name.
   - `changeme`
-    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  You'll want to rename and edit this script if you plan to use it.
+    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  You'll want to rename and edit this script if you plan to use it.  Validates that the provided Java is new enough to run the program and alerts if not.
