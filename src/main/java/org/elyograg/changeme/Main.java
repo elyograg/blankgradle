@@ -27,10 +27,10 @@ public final class Main implements Runnable {
 
   /**
    * An argument group in which one of the options is required. The way the shell
-   * script is set up, only one required is allowed. The "multiplicity" parameter
-   * on the annotation is what makes one of the options in this group required. If
-   * multiple required options are required, the "trial run" in the shell script
-   * will need to be changed. TODO: Deal with that requirement.
+   * script is set up, only one required option is allowed. Recommendation is that
+   * other options that might be called 'required' should have default values
+   * instead of being required ... to do otherwise will require adjustments to the
+   * shell script.
    */
   @ArgGroup(multiplicity = "1")
   private static RequiredOpts requiredOpts;
