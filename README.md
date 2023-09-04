@@ -25,7 +25,7 @@ that say `changeme` are very easy to change in a good IDE.
 
 - Clone the project.
 - cd to the new directory.
-- `./gradlew clean dist`
+- `./gradlew clean jar`
 - `./changeme`
 
 ## To use for your own project:
@@ -64,7 +64,7 @@ that say `changeme` are very easy to change in a good IDE.
     - Uses logback as the final logging destination.
     - Uses JUnit4 for a test framework.
     - Automatically gets new minor and point releases of dependencies.  Adjust build.gradle if you don't want this.
-    - Has a "dist" target that builds a jar with dependencies.  The build.gradle file specifies the class with a `main` method so it can be started with `java -jar filename.jar`.
+    - Has a "jar" target that builds a jar with dependencies.  The build.gradle file specifies the class with a `main` method so it can be started with `java -jar filename.jar`.
   - `settings.gradle`
     - Just defines the project name.
   - `changeme`
