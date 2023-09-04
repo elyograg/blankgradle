@@ -6,6 +6,10 @@ structure is odd.  Everything expected at the root is in a lib directory.
 Created this as a quick starting point for new projects so no surgery is
 required.
 
+The overall design of this project is for a commandline program.  If you
+want to write a server-type program, the shell script will need extensive
+changes.
+
 You should run `git grep -i changeme` and `find . | grep -i changeme` after
 cloning this repository so you can see all the places that will most likely
 need an adjustment for you to correctly create your own project.  You should
@@ -64,4 +68,4 @@ that say `changeme` are very easy to change in a good IDE.
   - `settings.gradle`
     - Just defines the project name.
   - `changeme`
-    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  Validates that the provided Java is new enough to run the program and alerts if not.  You'll want to rename and edit this script if you plan to use it.  This project is designed as a starting point for a commandline program.
+    - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  Validates that the provided Java is new enough to run the program and alerts if not.  You'll want to rename and edit this script if you plan to use it.
