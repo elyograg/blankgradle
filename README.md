@@ -38,17 +38,17 @@ that say `changeme` are very easy to change in a good IDE.
 
 - A complete project structure ready to be populated.
   - `src/main/java/org/elyograg/changeme`
-    - Main.java
+    - `Main.java`
       - A mostly empty template class.
       - Sets up a picocli framework for handling commandline options.
-    - StaticStuff.java
+    - `StaticStuff.java`
     -  A class to put static methods, constants, etc.
   - `src/main/resources`
     - A place to put resources.
-      - Includes a logback.xml config file as a starting point.
-      - One common thing found here are properties files like application.properties.
+      - Includes a `logback.xml` config file as a starting point.
+      - One common thing found here are properties files like `application.properties`
   - `src/test/java/org/elyograg/changeme`
-    - MainTests.java
+    - `MainTests.java`
       - A mostly empty template class.
   - `src/test/resources`
     - A place to put resources for test code.
@@ -61,7 +61,7 @@ that say `changeme` are very easy to change in a good IDE.
     - Uses JUnit4 for a test framework.
     - Automatically gets new minor and point releases of dependencies.  Adjust build.gradle if you don't want this.
     - Has a "dist" target that builds a jar with dependencies.  The build.gradle file specifies the class with a `main` method so it can be started with `java -jar filename.jar`.
-  - settings.gradle`
+  - `settings.gradle`
     - Just defines the project name.
   - `changeme`
     - A bash script that can handle `JAVA_HOME`, finds the jar, and starts it with all commandline options sent to script.  You'll want to rename and edit this script if you plan to use it.
