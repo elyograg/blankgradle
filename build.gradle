@@ -48,8 +48,6 @@ tasks.named('test') {
   useJUnitPlatform()
 }
 
-//apply plugin: 'java'
-
 jar {
   manifest {
     attributes 'Implementation-Title': 'changeme',
